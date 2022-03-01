@@ -5,7 +5,7 @@ import java.util.*;
 public class Lab03 {
 
     public String AnalyzingWeatherData(int [][] array) {
-        
+
         int min = array[0][0];
         int max = 0;
         HashSet<Integer> set = new HashSet<>();
