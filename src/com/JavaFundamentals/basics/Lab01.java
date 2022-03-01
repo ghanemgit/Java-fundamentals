@@ -20,25 +20,33 @@ public class Lab01 {
 
         /*************************************************************************************************/
         public  void flipNHeads(int n) {
-
+            /*
+            "flipNHeads(n)" , here n represent
+            how many heads I wanna this
+             function to flip in a row, and it
+             does not matter how many times it will
+              flip until we get it to show n heads in a row.
+             */
 
             Random random = new Random();
 
             int headCounter = 0;
-
-            for (int i = 0; i < n; i++) {
+            int i;
+            for ( i= 0; headCounter < n; i++) {
                 float ran = random.nextFloat();
                 if (ran < 0.5) {
-                    System.out.println("tails\n");
+                    headCounter=0;
+                    System.out.println("tails");
                 } else {
                     headCounter++;
-                    System.out.println("heads\n");
+                    System.out.println("heads");
 
                 }
 
-                System.out.println("It took " + n + " flips to flip " + headCounter + " head in a row.");
+
 
             }
+            System.out.println("It took " + i + " flips to flip " + n + " head in a row.");
         }
 
         /**************************************************************************************************/
