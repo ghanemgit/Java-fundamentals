@@ -6,3 +6,7 @@
 
 # Lab02
 ### Ok today is happy day because I'm done my tasks quickly you know why? ok, I will tell you, for first time Iam using the debugger tools I said oobs why I ignored an important thing like this I was surprised from the amount of ease with which the debugger tools gives us so today  learned great thing this task take 45min with me , thanks. 
+
+# Lab03
+### Until now, I learned how to use maps, sets, hashmap and hash set and what can I do by the objects from these classes like add, get, remove, and other edits also I do some applied on it in this lab.
+### *Note: Iam sorry but I still didn't solve the other part in this lab that's talk about I/O Files.

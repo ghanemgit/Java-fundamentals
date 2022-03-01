@@ -1,4 +1,4 @@
-package com.JavaFundamentals.basiclibrary.lib.src.test.java;
+package com.JavaFundamentals.basiclibrary.lib.src.main.java;
 
 public class Lab02 {
 

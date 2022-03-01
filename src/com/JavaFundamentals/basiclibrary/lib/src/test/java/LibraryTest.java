@@ -3,19 +3,27 @@
  */
 package com.JavaFundamentals.basiclibrary.lib.src.test.java;
 
+import com.JavaFundamentals.basiclibrary.lib.src.main.java.Lab02;
+import com.JavaFundamentals.basiclibrary.lib.src.main.java.Lab03;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.HashSet;
+import java.util.Iterator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
 
-    Lab02 test;
-
+    Lab02 test02;
+    Lab03 test03;
     @BeforeEach
     void setUp() {
-        test = new Lab02();
+
+        test02 = new Lab02();
+        test03 = new Lab03();
+
     }
 
 
@@ -27,9 +35,9 @@ class LibraryTest {
         int n1 = 4;
         int n2 = 7;
 
-        int[] testResult = test.roll(n);
-        int[] testResult1 = test.roll(n1);
-        int[] testResult2 = test.roll(n2);
+        int[] testResult = test02.roll(n);
+        int[] testResult1 = test02.roll(n1);
+        int[] testResult2 = test02.roll(n2);
 
 
         assertArrayEquals(testResult, testResult);
@@ -46,9 +54,9 @@ class LibraryTest {
         int[] arr1 = {90, 60, 50, 70, 50, 95, 85, -50};
         int[] arr2 = {100, 100, 100, 99, 99, 95, 99, 99};
 
-        int testResult = test.CalculatingAverages(arr);
-        int testResult1 = test.CalculatingAverages(arr1);
-        int testResult2 = test.CalculatingAverages(arr2);
+        int testResult = test02.CalculatingAverages(arr);
+        int testResult1 = test02.CalculatingAverages(arr1);
+        int testResult2 = test02.CalculatingAverages(arr2);
 
         assertEquals(79, testResult, "Your answer is wrong please double-check");
         assertEquals(56, testResult1, "Your answer is wrong please double-check");
@@ -63,9 +71,9 @@ class LibraryTest {
         int[] arr1 = {90, 60, 50, 70, 50, 91, 85, -50};
         int[] arr2 = {100, 100, 100, 99, 99, 95, 99, 99};
 
-        boolean testResult = test.containsDuplicates(arr);
-        boolean testResult1 = test.containsDuplicates(arr1);
-        boolean testResult2 = test.containsDuplicates(arr2);
+        boolean testResult = test02.containsDuplicates(arr);
+        boolean testResult1 = test02.containsDuplicates(arr1);
+        boolean testResult2 = test02.containsDuplicates(arr2);
 
         assertFalse(testResult, "Your answer is wrong please double-check");
         assertTrue(testResult1, "Your answer is wrong please double-check");
@@ -85,9 +93,11 @@ class LibraryTest {
                 {65, 56, 55, 52, 55, 62, 57}
         };
 
-        int[] testResult = test.arraysOfArrays(weeklyMonthTemperatures);
+        int[] testResult = test02.arraysOfArrays(weeklyMonthTemperatures);
         int[] arr = {65, 56, 55, 52, 55, 62, 57};
         assertArrayEquals(arr, testResult);
     }
+
+
 
 }
