@@ -29,4 +29,4 @@
 ### Until now, I solved this method:
 1)Analyzing Weather Data.
 
-2)Tally.
+
