@@ -9,15 +9,16 @@ import java.util.Scanner;
 public class App {
 
 
-    public static void main(String[] args) throws FileNotFoundException {
-        File read = new File("gates.js");
-        //Scanner scan = new Scanner(read);
-        System.out.println(read.canRead());
-        System.out.println(read.canWrite());
-        System.out.println(read.exists());
-        System.out.println(read.getName());
-        System.out.println(read.getAbsolutePath());
-        System.out.println(read.length());
+    public static void main(String[] args) throws IOException {
 
+        Lab03 test = new Lab03();
+
+        try {
+            test.fileReader();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
+
 }
+
