@@ -11,7 +11,7 @@
 
 
 # Lab02
-### Ok today is happy day because I'm done my tasks quickly you know why? ok, I will tell you, for first time Iam using the debugger tools I said oobs why I ignored an important thing like this I was surprised from the amount of ease with which the debugger tools gives us so today  learned great thing this task take 45min with me , thanks. 
+### Ok today is happy day because I'm done my tasks quickly you know why? ok, I will tell you, for first time Iam using the debugger tools I said oobs why I ignored an important thing like this I was surprised from the amount of ease with which the debugger tools gives us so today  learned great thing this task take 45min with me , thanks.
 ### The method that I was solved is:
 #### 1)Roll.
 
@@ -31,4 +31,7 @@
 
 #### 2)Tally.
 
+
 #### 3)File I/O
+
+
