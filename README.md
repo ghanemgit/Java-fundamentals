@@ -24,8 +24,10 @@
 
 # Lab03
 ### Until now, I learned how to use maps, sets, hashmap and hash set and what can I do by the objects from these classes like add, get, remove, and other edits also I do some applied on it in this lab.
-### *Note: Iam sorry but I still didn't solve the other part in this lab that's talk about I/O Files.
-### Until now, I solved this method:
+### And I learned a lot about write, read, and path of file and how I can delay with different files and different path's and what is packages and classes used in this process.
+### I solved this method:
 1)Analyzing Weather Data.
 
 2)Tally.
+
+3)File I/O
