@@ -24,7 +24,7 @@
 
 
 # Lab03
-### Until now, I learned how to use maps, sets, hashmap and hash set and what can I do by the objects from these classes like add, get, remove, and other edits also I do some applied on it in this lab.
+### I learned how to use maps, sets, hashmap and hash set and what can I do by the objects from these classes like add, get, remove, and other edits also I do some applied on it in this lab.
 ### And I learned a lot about write, read, and path of file and how I can delay with different files and different path's and what is packages and classes used in this process.
 ### I solved this method:
 #### 1)Analyzing Weather Data.
@@ -34,4 +34,12 @@
 
 #### 3)File I/O
 
-
+# Lab06
+#### In this lab I learned how to create class and create its properties(variables,fields), also I generate its constructor and pass all arguments for it, after that I learned how to create interface and all empty method inside it.
+#### So what I do in this lab is 
+- Create Restaurant class and its properties and constructors.
+- Create Review class and its properties and constructors.
+- Create Review form instance and its Method.
+- Connect between Restaurant and Review by add review method.
+- Do all test.
+ 
