@@ -1,24 +1,31 @@
 package com.JavaFundamentals.inheritance.lib.src.main.java.inheritance;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Formatter;
 public class Restaurant {
 
     String name;
-    byte star;
+    float stars;
     String priceCategory;
+    int reviewCounter = 0;
+    List <Review> reviews = new ArrayList<>();
+    int sumOfStars = 0;
+
 
     public Restaurant() {
     }
 
-    public Restaurant(String name, byte star) {
+    public Restaurant(String name, int star) {
         this.name = name;
-        this.star = star;
+        this.stars = star;
     }
 
 
 
-    public Restaurant(String name, byte star, String priceCategory) {
+    public Restaurant(String name, int star, String priceCategory) {
         this.name = name;
-        this.star = star;
+        this.stars = star;
         this.priceCategory = priceCategory;
     }
 
@@ -30,12 +37,12 @@ public class Restaurant {
         this.name = name;
     }
 
-    public byte getStar() {
-        return star;
+    public float getStars() {
+        return stars;
     }
 
-    public void setStar(byte star) {
-        this.star = star;
+    public void setStars(float stars) {
+        this.stars = stars;
     }
 
     public String getPriceCategory() {
@@ -48,19 +55,23 @@ public class Restaurant {
 
 
 
-    public void addReview(byte addRate){
-
-        this.star = addRate;
+    public void addReview(String body, String author, int stars){
+        reviewCounter++;
+        Review review = new Review(body,author,stars);
+        reviews.add(review);
+        sumOfStars+=  stars;
+        setStars((float) sumOfStars/ reviewCounter);
     }
-
 
 
     @Override
     public String toString() {
         return "Restaurant{" +
                 "name='" + name + '\'' +
-                ", star=" + star +
-                ", priceCategory=" + priceCategory +
+                String.format(", stars= %.1f" , stars) +
+                ", priceCategory='" + priceCategory + '\'' +
+                ", reviews=" + reviews +'\'' +
+                ", Number of reviews=" + reviewCounter +
                 '}';
     }
 }

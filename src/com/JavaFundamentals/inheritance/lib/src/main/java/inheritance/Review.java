@@ -1,16 +1,16 @@
 package com.JavaFundamentals.inheritance.lib.src.main.java.inheritance;
 
-public class Review extends Restaurant implements ReviewForm{
+public class Review {
 
     String reviewBody;
     String reviewAuthor;
-    byte reviewStars;
+    int reviewStars;
 
     public Review() {
     }
 
-    public Review(String name,String reviewBody, String reviewAuthor, byte reviewStars) {
-        super(name,reviewStars);
+    public Review(String reviewBody, String reviewAuthor, int reviewStars) {
+
         this.reviewBody = reviewBody;
         this.reviewAuthor = reviewAuthor;
         this.reviewStars = reviewStars;
@@ -18,32 +18,11 @@ public class Review extends Restaurant implements ReviewForm{
     }
 
 
-    @Override
-    public void restName(String name) {
-        super.name = name;
-    }
-
-    @Override
-    public void restStars(byte stars) {
-        this.reviewStars = stars;
-    }
-
-    @Override
-    public void reviewBody(String body) {
-        this.reviewBody = body;
-    }
-
-    @Override
-    public void reviewAuthor(String author) {
-        this.reviewAuthor = author;
-    }
-
 
     @Override
     public String toString() {
         return "Review{" +
-                "name='" + name + '\'' +
-                ", review Body='" + reviewBody + '\'' +
+                "review Body='" + reviewBody + '\'' +
                 ", review Author='" + reviewAuthor + '\'' +
                 ", review Stars=" + reviewStars +
                 '}';
