@@ -10,55 +10,38 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        Restaurant shawerma = new Restaurant("Shanab",(byte) 2,"$");
-        System.out.println(shawerma);
 
-        // This section for task 3
-//        System.out.println("One minute please, Rate us");
-//        System.out.println("A small description, Tell us your experience");
-//        String RevDesc = input.nextLine();
-//        System.out.println("Your Name?");
-//        String RevAuth = input.nextLine();
-//        boolean correctRate = true;
-//        byte RevStar = 0;
-//        while (correctRate){
-//            System.out.println("How likely are you to recommend "+ shawerma.name + " to a friend (0-5)");
-//            RevStar = input.nextByte();
-//            if(RevStar <= 5 && RevStar >= 0){
-//                break;
-//            }
-//            else {
-//                System.out.println("Please enter value between 0-5");
-//                correctRate = true;
-//            }
-//        }
+        // This section for task 1 and two (Test classes)
+//        Restaurant shawerma = new Restaurant("Shanab", 2,"$");
+//        System.out.println(shawerma);
 //
-//        Review review = new Review(shawerma.name,RevDesc,RevAuth,RevStar);
-//        System.out.println(review);
+//        Review reviewTest = new Review("very good restaurant","Mohammad ghanem",4);
+//        System.out.println(reviewTest);
 
 
-        //This section for 3rd task
-        System.out.println("One minute please, Rate us");
-        System.out.println("A small description, Tell us your experience");
-        String RevDesc = input.nextLine();
-        System.out.println("Your Name?");
-        String RevAuth = input.nextLine();
-        boolean correctRate = true;
-        byte RevStar = 0;
-        while (correctRate){
+
+        //This section for 3rd, 4th and 5th tasks
+
+          Restaurant shawerma = new Restaurant("Shanab", 2,"$");
+        int RevStar = 0;
+        while (true){
+            System.out.println("One minute please, Rate us");
+            System.out.println("A small description, Tell us your experience");
+            String RevDesc = input.next();
+            System.out.println("Your Name?");
+            String RevAuth = input.next();
             System.out.println("How likely are you to recommend "+ shawerma.name + " to a friend (0-5)");
-            shawerma.addReview(input.nextByte());//call add review method and pass the input for it
+            RevStar = input.nextByte();
+            //call add review method and pass the input for it
             if(RevStar <= 5 && RevStar >= 0){
-                break;
+                shawerma.addReview(RevDesc,RevAuth,RevStar);
+                System.out.println(shawerma.toString());
             }
             else {
                 System.out.println("Please enter value between 0-5");
-                correctRate = true;
             }
-        }
 
-        Review review = new Review(shawerma.name,RevDesc,RevAuth,shawerma.star);
-        System.out.println(review);
+        }
 
 
 
