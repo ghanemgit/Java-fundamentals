@@ -5,41 +5,97 @@ package com.JavaFundamentals.inheritance.lib.src.test.java.inheritance;
 
 import com.JavaFundamentals.inheritance.lib.src.main.java.inheritance.Restaurant;
 import com.JavaFundamentals.inheritance.lib.src.main.java.inheritance.Review;
+import com.JavaFundamentals.inheritance.lib.src.main.java.inheritance.Shop;
+import com.JavaFundamentals.inheritance.lib.src.main.java.inheritance.Theater;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class AppTest {
-    Restaurant restaurant = new Restaurant("Test" ,0, "$$$" );
-    Review review = new Review("very delicious meals","Mohammad Ghanem",5);
+    Restaurant restaurant;
+    Review review;
+    Shop shop;
+    Theater movie;
+
+    @BeforeEach
+    void setUp() {
+        restaurant = new Restaurant("Test", 0, "$$$");
+        review = new Review("very delicious meals", "Mohammad Ghanem", 5);
+        shop = new Shop("Bab almadinah Mall", "A very big mall contain a lot of floors and have very big separated mall inside of it", 4, "$$");
+        movie = new Theater();
+    }
 
 
+    ///////////////////////////////////////LAB06\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     @Test
     @DisplayName("Restaurant Constructor test")
-    void testToStringRestaurant() { //Test that your Restaurant constructor is behaving reasonably.
-        String ans =restaurant.toString();
-        String expectedAns = "Restaurant{name='Test', stars= 0.0, priceCategory='$$$', reviews=[]', Number of reviews=0}";
-        assertEquals(expectedAns,ans);
+    void testToStringRestaurant() {
+        String answer = restaurant.toString();
+        String expectedAnswer = "Restaurant{name='Test', stars= 0.0, priceCategory='$$$', reviews=[]', Number of reviews=1}";
+        assertEquals(expectedAnswer, answer);
 
     }
 
     @Test
     @DisplayName("Review Constructor test")
-    void testToStringReview() {  //Test that your constructor is working reasonably.
-        String ans =review.toString();
-        String expectedAns = "Review{review Body='very delicious meals', review Author='Mohammad Ghanem', review Stars=5}";
-        assertEquals(expectedAns,ans);
+    void testToStringReview() {
+        String answer = review.toString();
+        String expectedAnswer = "Review{review Body='very delicious meals', review Author='Mohammad Ghanem', review Stars=5}";
+        assertEquals(expectedAnswer, answer);
     }
 
 
-
-    @Test void addReviewTest () {
-        restaurant.addReview("very clean restaurant","Mohammad ghaenm",4);
-        restaurant.addReview("very good looking","Ghanem",2);
-        String ans =restaurant.toString();
-        String expectedAns = "Restaurant{name='Test', stars= 3.0, priceCategory='$$$', reviews=[Review{review Body='very clean restaurant', review Author='Mohammad ghaenm', review Stars=4}, Review{review Body='very good looking', review Author='Ghanem', review Stars=2}]', Number of reviews=2}";
-        assertEquals(expectedAns,ans);
+    @Test
+    @DisplayName("Add review to restaurant method")
+    void addReviewTestRes() {
+        restaurant.addReview("very clean restaurant", "Mohammad ghaenm", 4);
+        restaurant.addReview("very good looking", "Ghanem", 2);
+        String answer = restaurant.toString();
+        String expectedAnswer = "Restaurant{name='Test', stars= 2.0, priceCategory='$$$', reviews=[Review{review Body='very clean restaurant', review Author='Mohammad ghaenm', review Stars=4}, Review{review Body='very good looking', review Author='Ghanem', review Stars=2}]', Number of reviews=3}";
+        assertEquals(expectedAnswer, answer);
 
     }
+    //////////////////////////////////////LAB07\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    @Test
+    @DisplayName("Shop Constructor test")
+    void testToStringShop() {
+        String answer = shop.toString();
+        String expectedAnswer = "Shop{name='Bab almadinah Mall', stars= 0.0, Review=[]', description='A very big mall contain a lot of floors and have very big separated mall inside of it', priceCategeory='$$'}";
+        assertEquals(expectedAnswer, answer);
+
+    }
+
+    @Test
+    @DisplayName("Add review to shop method")
+    void addReviewTestShop() {
+        shop.addReview("very clean shop", "Mohammad ghaenm", 4);
+        shop.addReview("very good looking", "Ghanem", 2);
+        String answer = shop.toString();
+        String expectedAnswer = "Shop{name='Bab almadinah Mall', stars= 3.3, Review=[Review{review Body='very clean shop', review Author='Mohammad ghaenm', review Stars=4}, Review{review Body='very good looking', review Author='Ghanem', review Stars=2}]', description='A very big mall contain a lot of floors and have very big separated mall inside of it', priceCategeory='$$'}";
+        assertEquals(expectedAnswer, answer);
+
+    }
+
+    @Test
+    @DisplayName("Add & Remove movie Test")
+    void addRemoveMovieTest() {
+
+        movie.addMovie("Spider man");
+        movie.addMovie("Batman");
+        movie.addMovie("Mask man");
+        movie.addMovie("Fireman");
+        String answer = movie.removeMovie(4);
+        String answer2 = movie.removeMovie(6);
+        String expectedAnswer = "Before delete => [Spider man, Batman, Mask man, Fireman],  After delete => movies = [Spider man, Batman, Mask man]";
+        String expectedAnswer2 = "Error, please enter correct number";
+        assertEquals(expectedAnswer, answer);
+        assertEquals(expectedAnswer2, answer2);
+
+
+    }
+
 }

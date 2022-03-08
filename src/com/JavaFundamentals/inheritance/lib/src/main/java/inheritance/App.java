@@ -11,40 +11,75 @@ public class App {
         Scanner input = new Scanner(System.in);
 
 
-        // This section for task 1 and two (Test classes)
-//        Restaurant shawerma = new Restaurant("Shanab", 2,"$");
-//        System.out.println(shawerma);
-//
-//        Review reviewTest = new Review("very good restaurant","Mohammad ghanem",4);
-//        System.out.println(reviewTest);
+        Theater movie = new Theater("Spider Man");
 
-
-
-        //This section for 3rd, 4th and 5th tasks
-
-          Restaurant shawerma = new Restaurant("Shanab", 2,"$");
-        int RevStar = 0;
-        while (true){
-            System.out.println("One minute please, Rate us");
-            System.out.println("A small description, Tell us your experience");
-            String RevDesc = input.next();
-            System.out.println("Your Name?");
-            String RevAuth = input.next();
-            System.out.println("How likely are you to recommend "+ shawerma.name + " to a friend (0-5)");
-            RevStar = input.nextByte();
-            //call add review method and pass the input for it
-            if(RevStar <= 5 && RevStar >= 0){
-                shawerma.addReview(RevDesc,RevAuth,RevStar);
-                System.out.println(shawerma.toString());
-            }
-            else {
-                System.out.println("Please enter value between 0-5");
-            }
-
-        }
-
-
+                  movie.addMovie("Spider man");
+                  movie.addMovie("Batman");
+                  movie.addMovie("Mask man");
+                  movie.addMovie("Fireman");
+                  //movie.removeMovie();
+                  movie.addReview();
+                  System.out.println(movie);
 
 
     }
 }
+
+//////////////////////////////////////////LAB06\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    //This section for task 1 and two (Test classes)
+//    Restaurant shawerma = new Restaurant("Shanab", 2,"$");
+//        System.out.println(shawerma);
+//
+//                Review review = new Review("very good restaurant","Mohammad ghanem",4);
+//                System.out.println(review);
+//
+//
+//                //This section for 3rd, 4th and 5th tasks
+//                int userEnd = 0;
+//
+//                while (userEnd != -1) {
+//
+//                shawerma.addReview();
+//                System.out.println(shawerma);
+//                System.out.println("Enter -1 to exit or press 0 to add another review");
+//                userEnd = input.nextInt();
+//                }
+
+
+//////////////////////////////////////////LAB07\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+//   this section for 1 and 2 tasks
+//    Restaurant restaurant = new Restaurant("Shanab", 4, "$");
+//    Shop shop = new Shop("City Mall", "Amazing and very big mall and have multiple sections", 5, "$$$");
+//
+//
+//        while (true) {
+//                System.out.println("One minute please, Rate us\nPlease enter 1 to review restaurant and 2 to review shop or 3 to exit and show all Reviews");
+//                int userSelect = input.nextInt();
+//
+//                if (userSelect == 1) {
+//                restaurant.addReview();
+//                System.out.println(restaurant);
+//
+//                } else if (userSelect == 2) {
+//                shop.addReview();
+//                System.out.println(shop);
+//                } else if (userSelect == 3) {
+//                break;
+//                } else {
+//                System.out.println("Sorry, you entered wrong number");
+//                }
+//                }
+//                System.out.println("All Restaurant Reviews\n" + restaurant.getRestaurantReviews());
+//                System.out.println("All Shop Reviews\n" + shop.getShopReviews());
+
+//                this section for 3rd and 4th tasks
+//                  Theater movie = new Theater();
+//
+//                  movie.addMovie("Spider man");
+//                  movie.addMovie("Batman");
+//                  movie.addMovie("Mask man");
+//                  movie.addMovie("Fireman");
+//                  movie.removeMovie();
+//                  System.out.println(movie);
