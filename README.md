@@ -43,3 +43,11 @@
 - Connect between Restaurant and Review by add review method.
 - Do all test.
  
+# Lab07
+### In this lab I increase my experience with all about inheritance and know the difference between inheritance and composition, and I learned how to connect the classes together more effectively.
+### So what I do in this lab is
+- Create Shop class and write its constructor and add review method and do its tests.
+- Create Theater class and write its constructor and add, remove and review methods and do all implementation for it as required and do its tests.
+
+#### You can go to this path and run gradle test directly
+#### Java-fundamentals/src/com/JavaFundamentals/inheritance/lib

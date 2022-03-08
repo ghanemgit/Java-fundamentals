@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-07T22:19:55" hostname="Mohammad-PC" time="0.113">
+<testsuite name="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-03-08T21:53:39" hostname="Mohammad-PC" time="0.153">
   <properties/>
-  <testcase name="Review Constructor test" classname="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" time="0.096"/>
-  <testcase name="addReviewTest()" classname="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" time="0.014"/>
+  <testcase name="Review Constructor test" classname="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" time="0.105"/>
+  <testcase name="Add &amp; Remove movie Test" classname="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" time="0.016"/>
+  <testcase name="Add review to shop method" classname="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" time="0.014"/>
+  <testcase name="Add review to restaurant method" classname="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" time="0.011"/>
   <testcase name="Restaurant Constructor test" classname="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="Shop Constructor test" classname="com.JavaFundamentals.inheritance.lib.src.test.java.inheritance.AppTest" time="0.001"/>
+  <system-out><![CDATA[Spider man Added
+Batman Added
+Mask man Added
+Fireman Added
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
